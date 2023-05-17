@@ -1,0 +1,33 @@
+.wrapper {
+    margin-top: 32px;
+    background-color: var(--white);
+    min-height: 60px;
+    max-height: 260px;
+    border-radius: 12px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.loader {
+    width: 60px;
+    margin-left: 16px;
+}
+.footer {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.chat-input {
+    padding: 10px;
+    padding-left: 16px;
+    margin-right: 12px;
+    font-size: 1.6rem;
+    resize: none;
+    border: none;
+    outline: none;
+    width: 88%;
+}
+.send {
+    cursor: pointer;
+    margin-right: 20px;
+}

@@ -1,0 +1,47 @@
+.wrapper {
+    scrollbar-width: none;
+    height: 70vh;
+    font-size: 2rem;
+    -ms-overflow-style: none; /* Hide the scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none; /* Hide the scrollbar for Firefox */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for Chrome and Safari */
+}
+.message-text {
+    margin-bottom: 20px;
+    max-width: 70%;
+    font-size: 1.8rem;
+    text-align: left;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--primary);
+    color: var(--white);
+    word-wrap: break-word;
+    font-family: var(--font);
+    > p {
+        margin: 0;
+    }
+    white-space: pre-wrap;
+}
+.client-message {
+    display: grid;
+    justify-items: flex-end;
+    ::selection {
+        background-color: var(--white);
+        color: var(--primary);
+    }
+}
+.ai-message {
+    .message-text {
+        background-color: var(--white);
+        color: var(--text-color);
+    }
+    justify-items: flex-start;
+    ::selection {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+}
