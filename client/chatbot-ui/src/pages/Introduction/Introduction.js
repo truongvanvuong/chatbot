@@ -14,9 +14,13 @@ function Introduction() {
                 <header className={cx('header')}>
                     <div className={cx('logo')}>
                         <img className={cx('logo-img')} src={logo} alt="logo" />
-                        <span className={cx('bandname')}>XiaoBu</span>
+                        <span className={cx('bandname')}>ChatBot</span>
                     </div>
-                    <Button href="https://github.com/" rounded outline>
+                    <Button
+                        href="https://github.com/truongvanvuong/chatbot"
+                        rounded
+                        outline
+                    >
                         GitHub
                     </Button>
                 </header>

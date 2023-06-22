@@ -5,6 +5,7 @@ import {
     Navigate,
 } from 'react-router-dom';
 import React, { useState } from 'react';
+import Chat from './components/ChatBox';
 import { privateRoutes, publicRoutes } from './routes';
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -44,6 +45,7 @@ function App() {
                           })}
                 </Routes>
             </Router>
+            <Chat />
         </div>
     );
 }

@@ -10,6 +10,8 @@ import styles from './Home.module.scss';
 const cx = classNames.bind(styles);
 
 function Home() {
+    const [chat, setChat] = useState([]);
+
     const ResponseAI = async (chat) => {
         try {
             const response = await axios.post(
@@ -33,8 +35,6 @@ function Home() {
             console.log(error);
         }
     };
-
-    const [chat, setChat] = useState([]);
     const mutation = useMutation({
         mutationFn: () => {
             return ResponseAI(chat);
@@ -53,7 +53,6 @@ function Home() {
             }
         },
     });
-
     const sendMessgae = async (message) => {
         await Promise.resolve(setChat((prev) => [...prev, message]));
         mutation.mutate();
@@ -71,5 +70,4 @@ function Home() {
         </div>
     );
 }
-
 export default Home;

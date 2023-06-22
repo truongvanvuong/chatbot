@@ -1,0 +1,31 @@
+.form-control {
+    outline: none;
+    padding: 8px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    border-color: #ccc;
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: all 0.4s linear;
+    &:focus {
+        border-color: var(--primary);
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 60%;
+    height: 54px;
+}
+.erorr {
+    > .form-control {
+        border-color: red;
+    }
+    > p {
+        font-size: 1.3rem;
+        margin: 8px 0 0 0;
+        color: red;
+    }
+}

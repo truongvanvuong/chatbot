@@ -10,9 +10,46 @@
 .wrapper::-webkit-scrollbar {
     display: none; /* Hide the scrollbar for Chrome and Safari */
 }
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+    > img {
+        width: 86px;
+        margin-bottom: 40px;
+    }
+    > h1 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 3.6rem;
+    }
+}
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    :nth-child(2) {
+        margin: 0 20px;
+    }
+}
+.box-title {
+    margin: 0 0 26px 0;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+.example {
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-size: 1.6rem;
+}
 .message-text {
     margin-bottom: 20px;
-    max-width: 70%;
+    max-width: 65%;
     font-size: 1.8rem;
     text-align: left;
     padding: 20px;
@@ -26,7 +63,7 @@
     }
     white-space: pre-wrap;
 }
-.client-message {
+.user-message {
     display: grid;
     justify-items: flex-end;
     ::selection {

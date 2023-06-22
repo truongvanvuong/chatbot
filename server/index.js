@@ -23,5 +23,5 @@ app.use("/auth", authRouter);
 app.use("/user", authUser);
 app.use("/chatbot", chatBot);
 app.listen("7000", () => {
-  console.log("backend running http://localhost:7000");
+  console.log("Server running http://localhost:7000");
 });

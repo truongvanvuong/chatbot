@@ -1,0 +1,14 @@
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    font-size: 1.4rem;
+    padding: 8px;
+    &:hover {
+        cursor: pointer;
+        color: var(--primary);
+    }
+}

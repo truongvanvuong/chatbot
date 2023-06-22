@@ -14,7 +14,8 @@
 .illustration {
     position: absolute;
     top: 50%;
-    transform: translate(18%, -30%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
     width: 400px;
@@ -23,6 +24,12 @@
     position: relative;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
+    width: 45%;
+}
+.wrapper-left-login {
     background: #d5a0e0;
-    width: 40%;
+    > .illustration {
+        left: 0;
+        transform: translate(30%, -30%);
+    }
 }

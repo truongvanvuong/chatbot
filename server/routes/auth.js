@@ -14,9 +14,12 @@ router.post("/register", async (req, res) => {
       password: hashedPass,
     });
     const existingUser = await User.findOne({ username: req.body.username });
+    const existingUserEmail = await User.findOne({ email: req.body.email });
 
     if (existingUser) {
-      res.status(400).json("User already exists");
+      res.status(400).json("Tên người dùng đã tại");
+    } else if (existingUserEmail) {
+      res.status(401).json("Email đã được đăng ký");
     } else {
       const user = await newUser.save();
       res.status(200).json(user);
@@ -40,12 +43,14 @@ router.post("/login", async (req, res) => {
     const validate = await bcrypt.compare(req.body.password, user.password);
 
     // if not validate
-    !validate && res.status(400).json("Wrong Credentials");
+    if (!validate) {
+      return res.status(401).json("Wrong Credentials");
+    }
 
     const { password, ...other } = user._doc;
     res.status(200).json(other);
   } catch (error) {
-    res.status(200).json(error);
+    res.status(400).json(error);
   }
 });
 module.exports = router;
